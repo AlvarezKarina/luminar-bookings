@@ -14,10 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
+            $table->id(); //Integer Unsigned Increment
+            $table->string('name'); //Varchar
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+            $table->timestamp('email_verified_at')->nullable(); //nullable: Sirve para indicar que ese campo puede quedar vacio. 
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
@@ -29,7 +29,7 @@ return new class extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down() //Elimina la tabla users
     {
         Schema::dropIfExists('users');
     }
