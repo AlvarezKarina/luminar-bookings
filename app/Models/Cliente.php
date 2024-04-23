@@ -21,7 +21,7 @@ class Cliente extends Model
 
     public function users()
     {
-        return $this->belongsTo(Users::class);
+        return $this->belongsTo(User::class);
     }
 
     protected $hidden = ['created_at', 'updated_at'];

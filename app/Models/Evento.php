@@ -18,7 +18,7 @@ class Evento extends Model
         'asistentes',
         'direccion',
         'foto',
-        'distrito',
+        'distrito_id',
         'estado_id',
         'fecha',
         'hora_inicio',

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Empresa extends Model
 {
-    
+
     protected $fillable = [
         'nombre',
         'nombre_encargado',
@@ -32,6 +32,6 @@ class Empresa extends Model
 
     public function users()
     {
-        return $this->belongsTo(Users::class);
+        return $this->belongsTo(User::class);
     }
 }

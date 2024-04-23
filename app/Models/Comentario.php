@@ -15,11 +15,11 @@ class Comentario extends Model
 
     public function evento()
     {
-        return $this->belongsTo(Eventos::class);
+        return $this->belongsTo(Evento::class);
     }
 
     public function cliente()
     {
-        return $this->belongsTo(Clientes::class);
+        return $this->belongsTo(Cliente::class);
     }
 }
