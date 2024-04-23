@@ -19,7 +19,7 @@ class eventoController extends Controller
             'asistentes' => 'required|integer',
             'direccion' => 'required|string',
             'foto' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'distrito' => 'required|string',
+            'distrito_id' => 'required|integer',
             'estado_id' => 'required|integer',
             'fecha' => 'required|date',
             'hora_inicio' => 'required|date_format:H:i',

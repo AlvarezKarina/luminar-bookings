@@ -9,15 +9,13 @@ class Departamento extends Model
 {
     use HasFactory;
 
-    private $table = "departamentos";
-
     //Campos requeridos 
     public $fillable = [
         'nombre_departamento'
     ];
 
     //Campos ocultos 
-    private $hidden = [
+    protected  $hidden = [
         'id'
     ];
 
