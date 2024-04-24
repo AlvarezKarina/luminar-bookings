@@ -24,5 +24,9 @@ class DatabaseSeeder extends Seeder
         $this ->call(DepartamentoSeeder::class);
         $this->call(MunicipioSeeder::class);
         $this->call(DistritoSeeder::class);
+        $this->call(CategoriaEventoSeeder::class);
+        $this->call(EStadoEventoSeeder::class);
+        $this->call(ClasificacionEventoSeeder::class);
+        $this->call(EstadoEmpresaSeeder::class);
     }
 }
