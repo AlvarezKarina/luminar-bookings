@@ -28,5 +28,12 @@ class DatabaseSeeder extends Seeder
         $this->call(EStadoEventoSeeder::class);
         $this->call(ClasificacionEventoSeeder::class);
         $this->call(EstadoEmpresaSeeder::class);
+        $this->call(userSeeder::class);
+        $this->call(EventoSeeder::class);
+        $this->call(EmpresaSeeder::class);
+        $this->call(clientesSeeder::class);
+        $this->call(comentarioSeeder::class);
+        $this->call(compraSeeder::class);
+
     }
 }
