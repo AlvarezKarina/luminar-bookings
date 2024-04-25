@@ -12,6 +12,7 @@ use App\Http\Controllers\EstadoEmpresaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EventoController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MunicipioController;
 use App\Http\Controllers\UserController;
 use App\Models\CategoriaEvento;
@@ -35,6 +36,15 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::post('/eventos', [EventoController::class, 'store']);
+
+Route::post("/cliente-usuario", array(
+    AuthController::class,
+    'registerCliente'
+)
+
+)->name('registrar-cliente');
+
+
 
 
 Route::get('/categoriaEvento/index',[CategoriaEventoController::class, 'index']);

@@ -26,6 +26,7 @@ class EmpresaSeeder extends Seeder
         $empresa->distrito_id="1";
         $empresa->estado_id="1";
         $empresa->user_id="1";
+        
 
         $empresa->save();
 
