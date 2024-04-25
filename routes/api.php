@@ -33,7 +33,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
+Route::get('/eventos/search', [EventoController::class, 'search']);
 
 Route::post('/eventos', [EventoController::class, 'store']);
 
@@ -70,3 +70,9 @@ Route::get('/estadoEvento/index',[EstadoEventoController::class, 'index']);
 Route::get('/municipio/index',[MunicipioController::class, 'index']);
 
 Route::get('/user/index',[UserController::class, 'index']);
+
+Route::prefix('customer')->group(function () {
+    Route::put('put/{evento}', [EventoController::class, 'put']);
+    Route::delete('/delete/{evento}', [EventoController::class, 'delete']);
+    
+});
