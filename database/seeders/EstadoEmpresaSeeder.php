@@ -18,9 +18,9 @@ class EstadoEmpresaSeeder extends Seeder
     public function run()
     {
         $estado_empresa = [
-             'nombre_estado' => 'En validación',
-             'nombre_estado' => 'Validado',
-             'nombre_estado' => 'Incompleto'
+             ['nombre_estado' => 'En validación'],
+             ['nombre_estado' => 'Validado'],
+             ['nombre_estado' => 'Incompleto']
 
         ];
 
