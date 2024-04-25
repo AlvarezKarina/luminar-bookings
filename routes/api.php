@@ -44,6 +44,28 @@ Route::post("/cliente-usuario", array(
 
 )->name('registrar-cliente');
 
+ // POST -> /api/auth/login. 
+ Route::post('login', array(
+    AuthController::class,
+    'login'
+))->name('auth.login');
+
+// GET ->  /api/auth/logout
+Route::get('logout', array(
+    AuthController::class,
+    'logout'
+))
+->middleware(['auth:api'])
+->name('auth.logout');
+
+Route::get('/profile' , array(
+    AuthController::class,
+    'profile'
+))
+->middleware(['auth:api'])
+    ->name('auth.profile');
+
+
 
 
 
@@ -70,9 +92,3 @@ Route::get('/estadoEvento/index',[EstadoEventoController::class, 'index']);
 Route::get('/municipio/index',[MunicipioController::class, 'index']);
 
 Route::get('/user/index',[UserController::class, 'index']);
-
-Route::prefix('customer')->group(function () {
-    Route::put('put/{evento}', [EventoController::class, 'put']);
-    Route::delete('/delete/{evento}', [EventoController::class, 'delete']);
-    
-});
